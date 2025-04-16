@@ -2,12 +2,8 @@
 #[warn(unused_imports)]
 fn main() {
     let hxd = "4a6f686e";
-
-    println!("Input hex: {}", hxd); // ✅ Step 1: Check if main runs at all
-
     match hexval(hxd) {
         Ok(bytes) => {
-            println!("Parsing successful. Bytes:");
             for byte in bytes {
                 println!("Dec: {}, Bin: {:08b}", byte, byte);
             }
